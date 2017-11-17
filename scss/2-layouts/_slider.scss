@@ -1,0 +1,118 @@
+.slider{
+    @include widthHeight(100%,50vh);
+    position: relative;
+    overflow:hidden;
+    >div{
+        @include widthHeight(100%,50vh);
+        animation:animacja 20s ease infinite 0s;
+        opacity:0;
+        position: absolute;
+        @include animacja;
+        @include flex(flex-end,row);
+    .slogan{
+        position: absolute;
+        right:100px;
+        background-color:$bg-menu;
+        line-height:$lh;
+        @include widthHeight(28%,50vh);
+        padding:5px;
+        @include flex(center,column);
+        align-items: center;
+        @include mQ(380px){
+            display:none;
+        }
+        @include mQS(380px,1000px){
+            display:none;
+        }
+        h2{
+            font-size:$font-size + 33.333%;
+            font-weight:$font-weight-b;
+            padding-bottom: 10px;
+             align-self: flex-start;
+            }
+        }
+    }
+}
+ul{
+  position: sticky;
+  top:0;
+  left:0;
+  z-index: 3;
+  @include mQ(380px){
+         z-index: 3;
+     }
+    li{
+        .sprites_media{
+        background: url('../img/sprites_spolecznosciowe.png');
+        @include widthHeight(43px,43px);
+     }
+    %social{
+    @include transition(all 0.25s linear);
+    border-top:10px solid rgb(240,240,240);
+    border-bottom:10px solid rgb(240,240,240);
+    box-sizing: content-box;
+    }
+    .facebook{
+        background-position:0px -1px;
+        @include positionSocial(300px,0px);
+        @include border-radius(3px);
+        border:10px solid rgb(240,240,240);
+        box-sizing: content-box;
+            &:hover{
+             border-right:0px solid transparent;
+             background-position: 0px -43px;
+            }
+        }
+    }
+    li ul li{
+    opacity:0;
+    float:left;
+        .twitter{
+        background-position:-52px -1px;
+        @extend %social;
+        @include positionSocial(300px,53px);
+            &:hover{
+            background-position: -52px -43px;
+            }
+        }
+        .youtube{
+        background-position:-104px -1px;
+        @extend %social;
+        @include positionSocial(300px,96px);
+            &:hover{
+            background-position: -104px -43px;
+            }
+        }
+        .in{
+       background-position:-155px -1px;
+       @extend %social;
+       @include positionSocial(300px,138px);
+       @include border-radius(3px);
+       border-right:10px solid rgb(240,240,240);
+           &:hover{
+           background-position: -155px -43px;
+            }
+         }
+      }
+      li ul li a{
+      padding:10px;
+      display: block;
+      @include transition(animation 1s ease-in-out 0s);}
+      li:hover ul.menu1 li{
+      opacity:0;
+      animation:menu1 2s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+}
+.triangle{
+    @include widthHeight(0,0);
+    @include triangle($ColorHover, down, 20px);
+    position:absolute;
+    right:200px;
+    @include mQ(380px){
+        display:none;
+        }
+     @include mQS(381px,1000px){
+        display:none;
+        }
+}

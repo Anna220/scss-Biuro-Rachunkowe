@@ -1,0 +1,354 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@keyframes menu1 {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes animacja {
+  25% {
+    opacity: 1; }
+  37% {
+    opacity: 0; } }
+body {
+  font-family: Quicksand, sans-serif;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 12px; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+header {
+  width: 100%;
+  margin: 0 auto;
+  width: 100%;
+  height: 20vh; }
+  header .logo {
+    width: 30%;
+    margin: 0 auto; }
+    @media screen and (max-width: 380px) {
+      header .logo {
+        width: 100%;
+        margin: 0 auto; } }
+    @media screen and (min-width: 381px) and (max-width: 1200px) {
+      header .logo {
+        width: 30%;
+        margin: 0 auto;
+        font-size: 100%; } }
+    header .logo h1, header .logo h2 {
+      font-weight: 700;
+      font-size: 250%;
+      padding-bottom: 10px;
+      padding-top: 5px; }
+    header .logo h1 {
+      border-bottom: 1px solid #808080; }
+      @media screen and (max-width: 380px) {
+        header .logo h1 {
+          font-size: 25px;
+          width: 80%;
+          margin: 0 auto; } }
+    @media screen and (max-width: 380px) {
+      header .logo h2 {
+        font-size: 25px;
+        width: 80%;
+        margin: 0 auto; } }
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(240, 240, 240, 0.7);
+  font-size: 140%;
+  z-index: 40; }
+  @media screen and (max-width: 380px) {
+    nav {
+      position: static; } }
+  nav ul {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row; }
+    @media screen and (max-width: 380px) {
+      nav ul {
+        width: 100%;
+        margin: 0 auto;
+        display: block;
+        text-align: center; } }
+    nav ul a {
+      display: block;
+      padding: 10px;
+      -moz-transition: all 1.5s ease 0s;
+      -webkit-transition: all 1.5s ease 0s;
+      transition: all 1.5s ease 0s;
+      margin-right: 30px;
+      border: 1px solid transparent; }
+      @media screen and (max-width: 380px) {
+        nav ul a {
+          width: 100%; } }
+      @media screen and (min-width: 381px) and (max-width: 1000px) {
+        nav ul a {
+          margin: 0; } }
+      nav ul a:hover {
+        color: darkgray;
+        border-top: 1px dotted #864949; }
+        @media screen and (max-width: 380px) {
+          nav ul a:hover {
+            border: 1px solid transparent;
+            background-color: #a9a9a9;
+            color: #fff; } }
+
+.slider {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  overflow: hidden; }
+  .slider > div {
+    width: 100%;
+    height: 50vh;
+    animation: animacja 20s ease infinite 0s;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row; }
+    .slider > div:nth-child(1) {
+      animation-delay: 0s;
+      background: url(../img/slide1.jpeg) center/cover no-repeat; }
+    .slider > div:nth-child(2) {
+      animation-delay: 5s;
+      background: url(../img/slide2.jpeg) center/cover no-repeat; }
+    .slider > div:nth-child(3) {
+      animation-delay: 10s;
+      background: url(../img/slide3.jpeg) center/cover no-repeat; }
+    .slider > div:nth-child(4) {
+      animation-delay: 15s;
+      background: url(../img/slide4.jpeg) center/cover no-repeat; }
+    .slider > div .slogan {
+      position: absolute;
+      right: 100px;
+      background-color: rgba(240, 240, 240, 0.7);
+      line-height: 16px;
+      width: 28%;
+      height: 50vh;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center; }
+      @media screen and (max-width: 380px) {
+        .slider > div .slogan {
+          display: none; } }
+      @media screen and (min-width: 380px) and (max-width: 1000px) {
+        .slider > div .slogan {
+          display: none; } }
+      .slider > div .slogan h2 {
+        font-size: 133.333%;
+        font-weight: 700;
+        padding-bottom: 10px;
+        align-self: flex-start; }
+
+ul {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3; }
+  @media screen and (max-width: 380px) {
+    ul {
+      z-index: 3; } }
+  ul li .sprites_media {
+    background: url("../img/sprites_spolecznosciowe.png");
+    width: 43px;
+    height: 43px; }
+  ul li ul li .twitter, ul li ul li .youtube, ul li ul li .in {
+    -moz-transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    transition: all 0.25s linear;
+    border-top: 10px solid #f0f0f0;
+    border-bottom: 10px solid #f0f0f0;
+    box-sizing: content-box; }
+  ul li .facebook {
+    background-position: 0px -1px;
+    position: absolute;
+    top: 300px;
+    left: 0px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 10px solid #f0f0f0;
+    box-sizing: content-box; }
+    ul li .facebook:hover {
+      border-right: 0px solid transparent;
+      background-position: 0px -43px; }
+  ul li ul li {
+    opacity: 0;
+    float: left; }
+    ul li ul li .twitter {
+      background-position: -52px -1px;
+      position: absolute;
+      top: 300px;
+      left: 53px; }
+      ul li ul li .twitter:hover {
+        background-position: -52px -43px; }
+    ul li ul li .youtube {
+      background-position: -104px -1px;
+      position: absolute;
+      top: 300px;
+      left: 96px; }
+      ul li ul li .youtube:hover {
+        background-position: -104px -43px; }
+    ul li ul li .in {
+      background-position: -155px -1px;
+      position: absolute;
+      top: 300px;
+      left: 138px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      border-right: 10px solid #f0f0f0; }
+      ul li ul li .in:hover {
+        background-position: -155px -43px; }
+  ul li ul li a {
+    padding: 10px;
+    display: block;
+    -moz-transition: animation 1s ease-in-out 0s;
+    -webkit-transition: animation 1s ease-in-out 0s;
+    transition: animation 1s ease-in-out 0s; }
+  ul li:hover ul.menu1 li {
+    opacity: 0;
+    animation: menu1 2s ease-in-out;
+    animation-fill-mode: forwards; }
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid darkgray;
+  position: absolute;
+  right: 200px; }
+  @media screen and (max-width: 380px) {
+    .triangle {
+      display: none; } }
+  @media screen and (min-width: 381px) and (max-width: 1000px) {
+    .triangle {
+      display: none; } }
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 1px dotted #864949;
+  overflow: hidden; }
+  section:nth-of-type(3) {
+    border-bottom: 1px dotted transparent; }
+  @media screen and (max-width: 380px) {
+    section {
+      padding: 10px;
+      width: 95%; } }
+  section .akapit, section .akapit2 {
+    margin: 20px 10px;
+    padding: 10px;
+    float: left;
+    line-height: 16px;
+    background-color: #f7f7f7;
+    transition: all 1s ease-in-out;
+    text-align: justify; }
+  section .akapit {
+    width: 31%; }
+    section .akapit:hover {
+      -webkit-box-shadow: 0px 0px 10px #864949;
+      -moz-box-shadow: 0px 0px 10px #864949;
+      box-shadow: 0px 0px 10px #864949;
+      cursor: pointer; }
+    @media screen and (max-width: 380px) {
+      section .akapit {
+        width: 100%;
+        margin: 0 auto;
+        margin: 5px 0px; } }
+    @media screen and (min-width: 381px) and (max-width: 1300px) {
+      section .akapit {
+        width: 100%;
+        margin: 1em auto; } }
+  section .akapit2 {
+    width: 47.5%; }
+    section .akapit2:hover {
+      -webkit-box-shadow: 0px 0px 10px #864949;
+      -moz-box-shadow: 0px 0px 10px #864949;
+      box-shadow: 0px 0px 10px #864949;
+      cursor: pointer; }
+    @media screen and (max-width: 380px) {
+      section .akapit2 {
+        width: 100%;
+        margin: 5px 0px; } }
+    @media screen and (min-width: 381px) and (max-width: 1300px) {
+      section .akapit2 {
+        width: 100%;
+        margin: 1em auto; } }
+  section .akapit p, section .akapit2 p, section p {
+    text-align: justify;
+    padding: 10px; }
+  section .akapit h3, section .akapit2 h3 {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center; }
+  section h3 {
+    font-weight: bold;
+    padding: 10px; }
+  section .material-icons {
+    font-size: 600%;
+    color: #864949;
+    padding: 15px 0;
+    display: block;
+    text-align: center; }
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background-color: #f7f7f7;
+  padding: 10px; }
+  @media screen and (max-width: 380px) {
+    footer {
+      text-align: center; } }
+  footer p {
+    width: 80%;
+    margin: 0 auto; }

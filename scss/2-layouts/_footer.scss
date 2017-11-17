@@ -1,0 +1,11 @@
+footer{
+   @include widthHeight(100%,20vh);
+    background-color:$bg-akapit;
+    padding:10px;
+    @include mQ(380px){
+        text-align: center;
+    }
+    p{
+        @include widthMargin(80%);
+    }
+}

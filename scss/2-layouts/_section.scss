@@ -1,0 +1,72 @@
+section{
+    @include widthMargin(80%);
+    border-bottom:1px dotted $borderColor;
+    overflow: hidden;
+    &:nth-of-type(3){
+        border-bottom:1px dotted transparent;
+            }
+    @include mQ(380px){
+        padding:10px;
+        width:95%;
+            }
+     %akapit{
+    margin:20px 10px;
+    padding: 10px;
+    float:left;
+    line-height: $lh;
+    background-color: $bg-akapit;
+    transition:all 1s ease-in-out;
+    text-align: justify;
+          }
+    .akapit{      
+        @extend %akapit;
+        width:31%;
+         &:hover{
+         @include box-shadow;
+         cursor: pointer;}
+        @include mQ(380px){
+            @include widthMargin(100%);
+            margin:5px 0px;
+                    }
+        @include mQS(381px,1300px){
+            width:100%;
+            margin:1em auto;         
+                }
+            }
+    .akapit2{
+        @extend %akapit;
+        width:47.5%;
+         &:hover{
+         @include box-shadow;
+         cursor: pointer;}
+        @include mQ(380px){
+           width:100%;
+           margin:5px 0px;
+            }
+        @include mQS(381px,1300px){
+            width:100%;
+            margin:1em auto;
+                }
+            }
+    .akapit p, .akapit2 p, p{
+        text-align:justify;
+        padding:10px;}
+    .akapit  h3, .akapit2 h3{
+        font-weight:bold;
+        padding:10px;
+        text-align:center;
+        }
+    h3{
+        font-weight:bold;
+        padding:10px;
+    }
+    .material-icons{
+        font-size:$font-size * 6;
+        color:$borderColor;
+        padding:15px 0;
+        display:block;
+        text-align:center;
+     }
+}
+
+
